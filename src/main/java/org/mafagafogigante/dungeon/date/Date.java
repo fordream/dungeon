@@ -188,13 +188,24 @@ public class Date implements Comparable<Date>, Serializable {
 
   @Override
   public int compareTo(@NotNull Date date) {
-    if (time > date.time) {
-      return 1;
-    } else if (time == date.time) {
-      return 0;
-    } else {
-      return -1;
+    return Long.compare(time, date.time);
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
     }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    Date date = (Date) o;
+    return time == date.time;
+  }
+
+  @Override
+  public int hashCode() {
+    return (int) (time ^ (time >>> 32));
   }
 
   /**
