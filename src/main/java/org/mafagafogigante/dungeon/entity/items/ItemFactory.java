@@ -103,7 +103,8 @@ public abstract class ItemFactory {
   }
 
   /**
-   * Attempts to create an item from the ItemPreset specified by an ID with the provided creation date.
+   * Attempts to create an item from the ItemPreset specified by an ID with the provided creation date. Throws an
+   * IllegalArgumentException if an ItemPreset for this Id could not be found.
    *
    * @param id the ID of the preset, not null
    * @param date the creation date of the item, not null

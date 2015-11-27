@@ -73,11 +73,11 @@ public final class Location implements Serializable {
     this.items = new LocationInventory();
     for (Entry<Id, Percentage> entry : preset.getItems()) {
       if (Random.roll(entry.getValue())) {
-        Item item = ItemFactory.makeItem(entry.getKey(), world.getWorldDate());
-        if (item != null) {
+        try {
+          Item item = ItemFactory.makeItem(entry.getKey(), world.getWorldDate());
           this.addItem(item);
-        } else {
-          DungeonLogger.warning("Item preset not found: " + entry.getKey().toString() + ".");
+        } catch (IllegalArgumentException exception) {
+          DungeonLogger.logSevere(exception);
         }
       }
     }

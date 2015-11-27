@@ -71,12 +71,12 @@ class Dropper implements Serializable {
   private void dropVariableDrops() {
     for (Drop drop : dropList) {
       if (drop.rollForDrop()) {
-        Item item = ItemFactory.makeItem(drop.getItemId(), creature.getLocation().getWorld().getWorldDate());
-        if (item != null) {
+        try {
+          Item item = ItemFactory.makeItem(drop.getItemId(), creature.getLocation().getWorld().getWorldDate());
           creature.getLocation().addItem(item);
           getDroppedItemsList().add(item);
-        } else {
-          DungeonLogger.warning("Got invalid Id (" + drop.getItemId() + ") from drop law.");
+        } catch (IllegalArgumentException exception) {
+          DungeonLogger.logSevere(exception);
         }
       }
     }
