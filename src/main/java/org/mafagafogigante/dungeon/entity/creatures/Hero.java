@@ -75,11 +75,13 @@ public class Hero extends Creature {
   private static final double MAXIMUM_HEALTH_THROUGH_REST = 0.6;
   private static final int SECONDS_TO_REGENERATE_FULL_HEALTH = 30000; // 500 minutes (or 8 hours and 20 minutes).
   private static final int MILK_NUTRITION = 12;
+  private static final long serialVersionUID = 4423083762117955828L;
   private final Walker walker = new Walker();
   private final Observer observer = new Observer(this);
   private final Spellcaster spellcaster = new HeroSpellcaster(this);
   private final AchievementTracker achievementTracker;
   private final Date dateOfBirth;
+
 
   Hero(CreaturePreset preset, AchievementTracker achievementTracker, Date dateOfBirth) {
     super(preset);

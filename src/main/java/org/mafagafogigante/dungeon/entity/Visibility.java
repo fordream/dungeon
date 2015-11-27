@@ -28,6 +28,8 @@ import java.io.Serializable;
  */
 public class Visibility implements Serializable {
 
+  private static final long serialVersionUID = -959312084990759898L;
+
   private final Percentage value;
 
   public Visibility(@NotNull Percentage value) {

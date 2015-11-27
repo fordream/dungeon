@@ -24,6 +24,8 @@ import java.util.Comparator;
 
 class NameUnlockedAchievementComparator implements Comparator<UnlockedAchievement>, Serializable {
 
+  private static final long serialVersionUID = -847814889919041329L;
+
   @Override
   public int compare(UnlockedAchievement a, UnlockedAchievement b) {
     return a.getName().compareTo(b.getName());

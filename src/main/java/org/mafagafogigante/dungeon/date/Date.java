@@ -32,6 +32,8 @@ import java.io.Serializable;
  */
 public class Date implements Comparable<Date>, Serializable {
 
+  private static final long serialVersionUID = 732767578077968362L;
+
   /**
    * The time, in milliseconds.
    */

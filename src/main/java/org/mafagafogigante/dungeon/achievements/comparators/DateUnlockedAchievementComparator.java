@@ -24,6 +24,8 @@ import java.util.Comparator;
 
 class DateUnlockedAchievementComparator implements Comparator<UnlockedAchievement>, Serializable {
 
+  private static final long serialVersionUID = 8715867730561989239L;
+
   @Override
   public int compare(UnlockedAchievement left, UnlockedAchievement right) {
     return left.getDate().compareTo(right.getDate());

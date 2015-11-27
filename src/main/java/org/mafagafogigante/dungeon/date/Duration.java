@@ -28,6 +28,8 @@ import java.io.Serializable;
  */
 public class Duration implements Serializable {
 
+  private static final long serialVersionUID = -625089455295995599L;
+
   /**
    * The duration, in milliseconds.
    */

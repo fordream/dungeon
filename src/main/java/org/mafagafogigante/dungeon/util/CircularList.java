@@ -29,6 +29,7 @@ import java.util.List;
  */
 public final class CircularList<T> implements Serializable {
 
+  private static final long serialVersionUID = -2105560312112578680L;
   private final int capacity;
   private final List<T> list;
   /**

@@ -38,6 +38,8 @@ import java.util.Set;
  */
 public class AchievementTracker implements Serializable {
 
+  private static final long serialVersionUID = 7342573934471781951L;
+
   private final Statistics statistics;
   private final Set<UnlockedAchievement> unlockedAchievements = new HashSet<UnlockedAchievement>();
 

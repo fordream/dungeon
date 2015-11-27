@@ -29,6 +29,8 @@ import java.io.Serializable;
  */
 public class CommandHistory implements Serializable {
 
+  private static final long serialVersionUID = 8115834809521384542L;
+
   private static final int HISTORY_MAXIMUM_SIZE = 200; // Enough. Small so it doesn't slow down 'TAB' search.
   private final CircularList<String> commands;
   private transient Cursor cursor;

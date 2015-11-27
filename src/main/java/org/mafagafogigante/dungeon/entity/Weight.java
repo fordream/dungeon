@@ -32,6 +32,8 @@ import java.util.Locale;
  */
 public class Weight implements Comparable<Weight>, Serializable {
 
+  private static final long serialVersionUID = -892279242058936966L;
+
   public static final Weight ZERO = newInstance(0);
   private static final DecimalFormat WEIGHT_FORMAT = (DecimalFormat) NumberFormat.getInstance(Locale.US);
 

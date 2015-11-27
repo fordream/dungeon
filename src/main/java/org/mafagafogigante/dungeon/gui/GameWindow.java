@@ -69,6 +69,7 @@ public class GameWindow extends JFrame {
    */
   public static final int ROWS = 30;
   public static final int COLS = 100;
+  private static final long serialVersionUID = -3529013233184462038L;
   private static final int FONT_SIZE = 15;
   private static final Font FONT = getMonospacedFont();
   private static final String WINDOW_TITLE = "Dungeon";
@@ -205,6 +206,8 @@ public class GameWindow extends JFrame {
     });
 
     Action save = new AbstractAction() {
+      private static final long serialVersionUID = -4094566148542087437L;
+
       @Override
       public void actionPerformed(ActionEvent event) {
         if (acceptingNextCommand) {

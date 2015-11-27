@@ -27,6 +27,8 @@ import java.io.Serializable;
  */
 public final class UnlockedAchievement implements Serializable {
 
+  private static final long serialVersionUID = 3667446659520606858L;
+
   public final Id id;
   private final String name;
   private final String info;

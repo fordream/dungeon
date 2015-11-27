@@ -29,6 +29,8 @@ import java.io.Serializable;
  */
 public abstract class Entity implements Selectable, Serializable {
 
+  private static final long serialVersionUID = -4491557166296193211L;
+
   private final Id id;
   private final String type;
   private final Name name;
